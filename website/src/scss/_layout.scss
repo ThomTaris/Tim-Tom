@@ -1,0 +1,86 @@
+.content-container {
+	padding: 50px 30px 25px 30px;
+}
+
+.logo-centered {
+	background-image: url('../../resources/sfylabs-logo.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 50px;
+}
+
+%h1-base {
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: center;
+	margin-top: 30px;
+}
+
+%plain-text-base {
+	font-size: 18px;
+	line-height: 18px;
+	text-align: justify;
+	margin-bottom: 20px;
+}
+
+%notification-base {
+	padding: 10px 20px;
+	font-size: 18px;
+	line-height: 22px;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+%separator-base {
+	height: 4px;
+	display: block;
+	margin: 20px;
+	border: none;
+	background-color: $separator-a;
+
+}
+
+.section--variant-a {
+	background-color: $background-grey-a;
+
+	.header {
+		color: $text-title-a;
+		@extend %h1-base;
+	}
+
+	.plain-text {
+		color: $plain-text-a;
+		@extend %plain-text-base;
+	}
+
+	.notification {
+		color: $notification-text-a;
+		background-color: $notification-background-a;
+		@extend %notification-base;
+	}
+
+	.separator {
+		@extend %separator-base;
+	}
+}
+
+.section--variant-b {
+	background-color: $background-grey-b;
+
+	.header {
+		color: $text-title-b;
+		@extend %h1-base;
+	}
+
+	.plain-text {
+		color: $plain-text-b;
+		@extend %plain-text-base;
+	}
+
+	.separator {
+		@extend %separator-base;
+	}
+}

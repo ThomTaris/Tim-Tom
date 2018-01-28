@@ -1,0 +1,33 @@
+{
+  "name": "sfylabs-site",
+  "version": "1.0.0",
+  "description": "sfylabs site",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack && concat-cli -f libs/jquery.min.js libs/jquery.slimscroll.min.js libs/scrolloverflow.min.js libs/fullpage.continuousHorizontal.min.js libs/fullpage.resetSliders.min.js libs/jquery.fullpage.extensions.min.js -o dist/libs.js",
+    "dev": "webpack --watch"
+  },
+  "keywords": [
+    "sfylabs"
+  ],
+  "author": "TVDH",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "concat-cli": "^4.0.0",
+    "css-loader": "^0.28.8",
+    "file-loader": "^1.1.6",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "fullpage.js": "^2.9.5",
+    "jquery": "^3.2.1",
+    "jquery-slimscroll": "^1.3.8"
+  }
+}

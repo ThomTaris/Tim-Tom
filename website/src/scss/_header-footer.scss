@@ -1,0 +1,122 @@
+#header-container {
+	position:fixed;
+	z-index:9;
+	text-align: left;
+	width: 100%;
+}
+
+#footer-container {
+	color: #fff;
+	position:fixed;
+	z-index:9;
+	bottom:5px;
+	right: 20px;
+	text-align: right;
+	font-size: 12px;
+}
+
+#header-small-container {
+	display: block;
+
+	header {
+		width: 100%;
+		height: 60px;
+		line-height: 60px;
+
+		.hamburger {
+			position: absolute;
+			top: 7px;
+			left: 7px;
+			width: 27px;
+			height: 21px;
+			background: url(../../resources/hamburger.svg);
+			background-size: 27px 21px;
+			outline: 0;
+			border: 0;
+			z-index: 10000000000000;
+		}
+
+		.cross {
+			display: none;
+			position: absolute;
+			top: 7px;
+			left: 7px;
+			width: 21px;
+			height: 21px;
+			background: url(../../resources/close.svg);
+			background-size: 21px 21px;
+			outline: 0;
+			border: 0;
+			z-index: 10000000000000;
+		}
+	}
+
+	.menu {
+		display: none;
+		top: 0;
+		z-index: 1000000;
+		font-weight: 500;
+		font-size: 0.8em;
+		width: 100%;
+		background: $menu-background;
+		position: absolute;
+		text-align: right;
+
+		ul {
+			margin: 10px 0 0 0;
+			padding: 0;
+			list-style-type: none;
+			list-style-image: none;
+		}
+
+		li {
+			display: block;
+			padding: 15px 15px 15px 0;
+			border-bottom: $menu-border 1px solid;
+		}
+
+		li:hover {
+			display: block;
+			background: #ffffff;
+			padding: 15px 15px 15px 0;
+		}
+
+		ul li a {
+			text-decoration: none;
+			margin: 0;
+			color: #666;
+		}
+
+		ul li a:hover {
+			color: #666;
+			text-decoration: none;
+		}
+
+		a {
+			text-decoration: none;
+			color: #666;
+		}
+
+		a:hover {
+			text-decoration: none;
+			color: #666;
+		}
+	}
+}
+
+#header-normal-container {
+	display: none;
+}
+
+
+
+/* desktop & tablet */
+@media only screen and (min-width: 500px) {
+	#header-small {
+		display: none;
+	}
+
+	#header-normal {
+		display: block;
+	}
+}
