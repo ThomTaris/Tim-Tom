@@ -1,6 +1,6 @@
 import './scss/index.scss';
 
-$(document).ready(function() {
+$(document).ready(() => {
 	$('#fullpage').fullpage({
 		continuousHorizontalKey: 'ZWtzY2hlbWEuYmVfVWpLWTI5dWRHbHVkVzkxYzBodmNtbDZiMjUwWVd3PThocg==',
 		resetSlidersKey: 'ZWtzY2hlbWEuYmVfMUFoY21WelpYUlRiR2xrWlhKemI3NQ==',
@@ -8,31 +8,33 @@ $(document).ready(function() {
 		resetSliders: true,
 		scrollOverflow: true,
 		verticalCentered: false,
+		controlArrows: true,
+		fitToSection: true,
 	});
 
-	$( "#product-page-threat-fabric" ).click(function() {
+	$( "#product-page-threat-fabric" ).click(() => {
 		$.fn.fullpage.moveSlideLeft();
 	});
 
-	$( "#product-page-csd" ).click(function() {
+	$( "#product-page-csd" ).click(() => {
 		$.fn.fullpage.moveSlideRight();
 	});
 });
 
-$( document ).ready(function() {
+$( document ).ready(() => {
 	let menuExpanded = false;
 
-	$( ".hamburger" ).click(function() {
+	$( ".hamburger" ).click(() => {
 		menuExpanded = true;
 		$( ".menu" ).slideToggle( "fast", setMenuButtonState);
 	});
 
-	$( ".cross" ).click(function() {
+	$( ".cross" ).click(() => {
 		menuExpanded = false;
 		$( ".menu" ).slideToggle( "fast", setMenuButtonState);
 	});
 
-	$(".menu a").click(function() {
+	$(".menu a").click(() => {
 		menuExpanded = false;
 		$( ".menu" ).slideToggle( "fast", setMenuButtonState);
 	});

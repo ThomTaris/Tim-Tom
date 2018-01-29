@@ -1,22 +1,46 @@
+.section {
+	background-color: $background-grey;
+}
+
 .content-container {
+	padding: 0 30px 25px 30px;
+}
+
+.content-container.main-page {
 	padding: 50px 30px 25px 30px;
 }
 
-.logo-centered {
-	background-image: url('../../resources/sfylabs-logo.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	height: 50px;
+.content-container.centered-content {
+	text-align: center;
 }
 
-%h1-base {
+%page-title-base {
 	text-transform: uppercase;
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 24px;
 	text-align: center;
 	margin-top: 30px;
+}
+
+%section--title-base {
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 40px;
+	vertical-align: center;
+	text-align: center;
+	margin: 0 -30px 40px -30px;
+	color: white;
+}
+
+%section--subtitle-base {
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 36px;
+	vertical-align: center;
+	color: #203844;
 }
 
 %plain-text-base {
@@ -40,15 +64,23 @@
 	margin: 20px;
 	border: none;
 	background-color: $separator-a;
-
 }
 
 .section--variant-a {
-	background-color: $background-grey-a;
+	background-color: $background-grey;
 
-	.header {
+	.page-title {
 		color: $text-title-a;
-		@extend %h1-base;
+		@extend %page-title-base;
+	}
+
+	.section--title {
+		background-color: $section-title-background-a;
+		@extend %section--title-base;
+	}
+
+	.section--subtitle {
+		@extend %section--subtitle-base;
 	}
 
 	.plain-text {
@@ -68,11 +100,15 @@
 }
 
 .section--variant-b {
-	background-color: $background-grey-b;
+	background-color: $background-grey;
 
-	.header {
-		color: $text-title-b;
-		@extend %h1-base;
+	.section--title {
+		background-color: $section-title-background-b;
+		@extend %section--title-base;
+	}
+
+	.section--subtitle {
+		@extend %section--subtitle-base;
 	}
 
 	.plain-text {
