@@ -1,3 +1,19 @@
+@mixin invisible() {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+@keyframes fade {
+	0%,100% { opacity: 0 }
+	50% { opacity: 1 }
+}
+
 .logo-centered {
 	background-image: url('../../resources/sfylabs-logo.png');
 	background-size: contain;
@@ -44,7 +60,25 @@
 	border-color: transparent #fff transparent transparent;
 }
 
-//.form__row{margin-bottom:1rem}.form__row:last-child{margin-bottom:0}.form__label{display:block;margin-bottom:.25rem}.form__label:last-child{margin-bottom:0}button,input[type=text],input[type=email],textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;padding:.5rem;width:100%;border:1px solid #999;border-radius:0;font-size:1.25rem}input[type=checkbox]{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}input[type=checkbox]+.form__label{padding-left:2rem;cursor:pointer}input[type=checkbox]+.form__label:before{content:'';position:absolute;display:block;margin:.2rem 0 0 -2rem;height:1.375rem;width:1.375rem;background:#fff;border:1px solid #999}input[type=checkbox]:checked+.form__label:before{background-image:url(data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M9%2016.2L4.8%2012l-1.4%201.4L9%2019%2021%207l-1.4-1.4z%22%20fill%3D%22%23333%22%2F%3E%3C%2Fsvg%3E%0A)}fieldset{margin:0;padding:0;border:0}legend{margin-bottom:.25rem;padding:0}.button,button{padding:.75rem;width:auto;background:#abd14e;border:none;color:#fff}
+.product-summary {
+	text-align: left;
+	font-size: 18px;
+
+	.title {
+		color: $plain-text-a;
+		margin-bottom: 15px;
+		font-weight: 500;
+	}
+
+	ul {
+		list-style: disc;
+	}
+
+
+	li {
+		color: $text-title-a;
+	}
+}
 
 /* desktop & tablet */
 @media only screen and (min-width: 500px) {

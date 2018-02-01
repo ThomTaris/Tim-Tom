@@ -60,10 +60,11 @@
 		width: 100%;
 		background: $menu-background;
 		position: absolute;
-		text-align: right;
+		text-align: left;
+
 
 		ul {
-			margin: 10px 0 0 0;
+			margin: 0 0 0 0;
 			padding: 0;
 			list-style-type: none;
 			list-style-image: none;
@@ -71,7 +72,7 @@
 
 		li {
 			display: block;
-			padding: 15px 15px 15px 0;
+			padding: 15px 0 15px 45px;
 			border-bottom: $menu-border 1px solid;
 		}
 

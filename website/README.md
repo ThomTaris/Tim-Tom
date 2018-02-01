@@ -11,6 +11,3 @@
 2. npm install
 3. npm run dev (for development)
 4. npm run build (for releasing a new version)
-
-
-https://medium.com/a-beginners-guide-for-webpack-2/handling-images-e1a2a2c28f8d

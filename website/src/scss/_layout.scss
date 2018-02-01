@@ -4,6 +4,45 @@
 
 .content-container {
 	padding: 0 30px 25px 30px;
+
+	.breakout {
+		margin: 0 -30px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		.margin {
+			width: 30px;
+			height: 100%;
+			align-self: center;
+
+			.left-triangle {
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 14px 24.2px 14px 0;
+				border-color: transparent $separator-a transparent transparent;
+				opacity: 1;
+				animation: fade 10s infinite;
+			}
+
+			.right-triangle {
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 14px 0 14px 24.2px;
+				border-color: transparent transparent transparent $separator-a;
+				opacity: 1;
+				animation: fade 10s infinite;
+			}
+		}
+
+		.content {
+			flex-grow: 1;
+		}
+
+
+	}
 }
 
 .content-container.main-page {
@@ -37,10 +76,10 @@
 %section--subtitle-base {
 	text-transform: uppercase;
 	font-weight: 500;
-	font-size: 16px;
-	line-height: 36px;
-	vertical-align: center;
-	color: #203844;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: center;
+	margin-top: 10px;
 }
 
 %plain-text-base {
@@ -59,7 +98,7 @@
 }
 
 %separator-base {
-	height: 4px;
+	height: 2px;
 	display: block;
 	margin: 20px;
 	border: none;
@@ -80,6 +119,14 @@
 	}
 
 	.section--subtitle {
+		color: $text-title-a;
+		margin-bottom: 10px;
+		@extend %section--subtitle-base;
+	}
+
+	.section--subtitle--strong {
+		color: $plain-text-a;
+		margin-bottom: 10px;
 		@extend %section--subtitle-base;
 	}
 
@@ -97,6 +144,11 @@
 	.separator {
 		@extend %separator-base;
 	}
+
+	.internal-link {
+		margin-top: 15px;
+		text-decoration: underline;
+	}
 }
 
 .section--variant-b {
@@ -108,12 +160,22 @@
 	}
 
 	.section--subtitle {
+		margin-bottom: 10px;
 		@extend %section--subtitle-base;
 	}
 
 	.plain-text {
 		color: $plain-text-b;
 		@extend %plain-text-base;
+	}
+
+	.internal-link {
+		margin-top: 12px;
+		text-decoration: underline;
+	}
+
+	.internal-link:hover {
+		color: $logo-green;
 	}
 
 	.separator {

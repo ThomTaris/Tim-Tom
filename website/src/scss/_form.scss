@@ -1,0 +1,120 @@
+.form-container {
+	margin-top: 20px;
+
+	.section--subtitle {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	.form-explanation {
+		color: $img-subtitle;
+		line-height: 20px;
+	}
+
+	.submit-button {
+		background-color: $logo-green;
+		color: white;
+		font-size: 18px;
+		width: 160px;
+		border: 0;
+	}
+}
+
+input[type='text'],
+input[type='email'],
+textarea,
+button {
+	padding: 8px 0 8px 5px;
+	width: 100%;
+	border: 1px solid $notification-text-a;
+	border-radius: 0;
+	font-size: 16px;
+}
+
+//input:not([value=""]):invalid {
+//	border: 2px solid red;
+//}
+
+.form__row {
+	margin-bottom: 10px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.form__label {
+	display: block;
+	margin-bottom: 3px;
+	color: $notification-text-a;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.form-checkbox {
+	position: absolute;
+	opacity: 0;
+
+	& + label {
+		position: relative;
+		cursor: pointer;
+		padding: 0;
+		color: $notification-text-a;
+	}
+
+	& + label:before {
+		content: '';
+		margin-right: 10px;
+		display: inline-block;
+		vertical-align: text-top;
+		width: 20px;
+		height: 20px;
+		background: white;
+	}
+
+	&:hover + label:before {
+		background: $logo-green;
+	}
+
+	&:focus + label:before {
+		box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.12);
+	}
+
+	&:checked + label:before {
+		background: $logo-green;
+	}
+
+	&:disabled + label {
+		color: #b8b8b8;
+		cursor: auto;
+	}
+
+	&:disabled + label:before {
+		box-shadow: none;
+		background: #ddd;
+	}
+
+	&:checked + label:after {
+		content: '';
+		position: absolute;
+		left: 5px;
+		top: 9px;
+		background: white;
+		width: 2px;
+		height: 2px;
+		box-shadow:
+				2px 0 0 white,
+				4px 0 0 white,
+				4px -2px 0 white,
+				4px -4px 0 white,
+				4px -6px 0 white,
+				4px -8px 0 white;
+
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+}
