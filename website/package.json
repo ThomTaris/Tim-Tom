@@ -4,9 +4,9 @@
   "description": "sfylabs site",
   "main": "index.js",
   "scripts": {
-    "build": "webpack && concat-cli -f libs/jquery.min.js libs/jquery.slimscroll.min.js libs/scrolloverflow.min.js libs/fullpage.continuousHorizontal.min.js libs/fullpage.resetSliders.min.js libs/jquery.fullpage.extensions.min.js -o dist/libs.js",
+    "build": "webpack && concat-cli -f libs/jquery.min.js libs/jquery.slimscroll.min.js libs/scrolloverflow.min.js libs/fullpage.continuousHorizontal.min.js libs/fullpage.resetSliders.min.js libs/jquery.fullpage.extensions.min.js -o dist/site/libs.js && concat-cli -f libs/jquery.min.js -o dist/blog/libs.js",
     "dev": "webpack --watch",
-    "serve": "http-server -p 1234"
+    "serve": "http-server ./dist -p 1234"
   },
   "keywords": [
     "sfylabs"
@@ -20,6 +20,7 @@
     "concat-cli": "^4.0.0",
     "css-loader": "^0.28.8",
     "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^2.30.1",
     "http-server": "^0.11.1",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",

@@ -6,6 +6,12 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 https://codepen.io/waynedunkley/pen/YPJWaz
 
+https://medium.com/a-beginners-guide-for-webpack-2/index-html-using-html-webpack-plugin-85eabdb73474
+
+https://medium.com/tech-angels-publications/bundle-your-favicons-with-webpack-b69d834b2f53
+
+https://developer.mozilla.org/nl/docs/Web/CSS/calc
+
 font 18 bij 21px
 
 hr over volle breedte en wit

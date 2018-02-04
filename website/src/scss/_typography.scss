@@ -1,3 +1,18 @@
+/* latin */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Roboto'), local('Roboto-Regular'), url('./../resources/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2') format('woff2');
+}
+
+///* latin */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	src: local('Roboto Medium'), local('Roboto-Medium'), url('./../resources/RxZJdnzeo3R5zSexge8UUZBw1xU1rKptJj_0jans920.woff2') format('woff2');
+}
 body {
 	font-family: 'Roboto', sans-serif;
 }

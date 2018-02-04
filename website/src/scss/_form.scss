@@ -1,5 +1,5 @@
 .form-container {
-	margin-top: 20px;
+	padding-top: 20px;
 
 	.section--subtitle {
 		text-align: center;
@@ -7,14 +7,14 @@
 	}
 
 	.form-explanation {
-		color: $img-subtitle;
+		color: $black-green;
 		line-height: 20px;
 	}
 
 	.submit-button {
 		background-color: $logo-green;
 		color: white;
-		font-size: 18px;
+		font-size: $mobile-text-font-size;
 		width: 160px;
 		border: 0;
 	}
@@ -24,16 +24,12 @@ input[type='text'],
 input[type='email'],
 textarea,
 button {
-	padding: 8px 0 8px 5px;
+	padding: 8px 0;
 	width: 100%;
-	border: 1px solid $notification-text-a;
+	border: 1px solid $dark-grey;
 	border-radius: 0;
 	font-size: 16px;
 }
-
-//input:not([value=""]):invalid {
-//	border: 2px solid red;
-//}
 
 .form__row {
 	margin-bottom: 10px;
@@ -46,7 +42,7 @@ button {
 .form__label {
 	display: block;
 	margin-bottom: 3px;
-	color: $notification-text-a;
+	color: $dark-grey;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -61,7 +57,7 @@ button {
 		position: relative;
 		cursor: pointer;
 		padding: 0;
-		color: $notification-text-a;
+		color: $dark-grey;
 	}
 
 	& + label:before {
@@ -116,5 +112,14 @@ button {
 		-moz-transform: rotate(45deg);
 		-o-transform: rotate(45deg);
 		transform: rotate(45deg);
+	}
+}
+
+/* desktop & tablet */
+@media only screen and (min-width: 500px) {
+	.form-container {
+		width: 450px;
+		padding: 0 120px;
+		margin: 0 auto;
 	}
 }

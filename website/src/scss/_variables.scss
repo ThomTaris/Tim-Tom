@@ -1,20 +1,45 @@
-$menu-background: #F4F5F6;
-$menu-border: #C7CDD0;
-$menu-hover: #E9EBEC;
+// colors
+$very-light-grey: #F4F5F6;
+$light-grey: #E9EBEC;
+$base-grey: #C7CDD0;
+$dark-grey: #879499;
+$very-dark-grey: #6F7E84;
 $logo-green: #9CC500;
-$background-grey: #E9EBEC;
-$img-subtitle: #697980;
+$black-green: #697980;
+$black-blue: #354B56;
 
-$section-title-background-a: $logo-green;
-$separator-a: #C7CDD0;
-$text-title-a: #6F7E84;
-$plain-text-a: #354B56;
-$notification-background-a: #F4F5F6;
-$notification-text-a: #879499;
+$mobile-left-right-margin: 30px;
+$mobile-text-font-size: 18px;
+$mobile-text-line-height: 21px;
 
-$section-title-background-b: #BCC3C6;
-$text-title-b: #FFFFFF;
-$plain-text-b: #27292B;
-$line-separator-b: #C7CDD0;
+$tablet-left-right-margin: 60px;
+
+
+// illustration ratios
+$main-page-img-width: 3812px;
+$main-page-img-height: 2342px;
+
+$product-page-img-width: 3812px;
+$product-page-img-height: 1225px;
+
+$csd-page-img1-width: 3812px;
+$csd-page-img1-height: 2477px;
+
+$csd-page-img2-width: 3812px;
+$csd-page-img2-height: 2264px;
+
+$tf-page-img-width: 3812px;
+$tf-page-img-height: 3714px;
+
+$mobile-min-img-width: 360px;
+$tablet-min-img-width: 648px;
+$desktop-min-img-width: 780px;
+
+@function image-height($origWidth, $origHeight, $targetWidth) {
+	@return $origHeight / ($origWidth / $targetWidth);
+}
+
+
+
 
 

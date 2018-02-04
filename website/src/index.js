@@ -8,14 +8,30 @@ $(document).ready(() => {
 		continuousHorizontal: true,
 		resetSliders: true,
 		scrollOverflow: true,
+		scrollOverflowEndPrevent: { delay: 500, reversal: false },
 		verticalCentered: false,
 		controlArrows: false,
 		fitToSection: true,
 		scrollOverflowOptions: {
 			click:false,
 			preventDefaultException: {tagName: /.*/}
+		},
+		afterLoad: function(anchorLink, index){
+			if (index === 2) {
+				const loadedSection = $(this);
+				const scrollableSlides = loadedSection.find('.fp-scrollable');
+				//console.log()
+				for (let i = 1; i < scrollableSlides.length; i++) {
+					const IScroll = $(scrollableSlides[i]).data('iscrollInstance');
+					setTimeout(() => IScroll.scrollTo(0, 0, 0));
+
+				}
+			}
+
 		}
 	});
+
+
 
 	$( ".product-page-threat-fabric-link" ).click(() => {
 		$.fn.fullpage.moveSlideLeft();

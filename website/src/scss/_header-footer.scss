@@ -29,8 +29,10 @@
 			left: 7px;
 			width: 27px;
 			height: 21px;
-			background: url(../../resources/hamburger.svg);
-			background-size: 27px 21px;
+			background: url(../resources/hamburger.svg);
+			background-size: 23px 18px;
+			background-repeat: no-repeat;
+			padding: 2px;
 			outline: 0;
 			border: 0;
 			z-index: 10000000000000;
@@ -43,7 +45,7 @@
 			left: 7px;
 			width: 21px;
 			height: 21px;
-			background: url(../../resources/close.svg);
+			background: url(../resources/close.svg);
 			background-size: 21px 21px;
 			outline: 0;
 			border: 0;
@@ -58,7 +60,7 @@
 		font-weight: 500;
 		font-size: 0.8em;
 		width: 100%;
-		background: $menu-background;
+		background: $very-light-grey;
 		position: absolute;
 		text-align: left;
 
@@ -73,7 +75,8 @@
 		li {
 			display: block;
 			padding: 15px 0 15px 45px;
-			border-bottom: $menu-border 1px solid;
+			border-bottom: $base-grey 1px solid;
+			text-transform: uppercase;
 		}
 
 		li:hover {
@@ -109,15 +112,49 @@
 	display: none;
 }
 
+/* tablet */
+@media only screen and (min-width: 501px) and (max-width:999px) {
 
+}
 
-/* desktop & tablet */
-@media only screen and (min-width: 500px) {
-	#header-small {
+/* desktop */
+@media screen and (min-width:1000px) {
+	#header-normal-container {
+		width: 900px;
+		margin: 0 auto;
+	}
+}
+
+/* tablet & desktop */
+@media only screen and (min-width: 501px) {
+	#header-small-container {
 		display: none;
 	}
 
-	#header-normal {
+	#header-normal-container {
 		display: block;
+		text-align: right;
+
+		ul {
+			margin: 11px $tablet-left-right-margin 0 0;
+			padding: 0;
+			list-style-type: none;
+		}
+
+		li {
+			display: inline;
+			text-transform: uppercase;
+
+			a {
+				color: $very-dark-grey;
+				text-decoration: none;
+				font-size: 14px;
+				font-weight: 500;
+			}
+
+			a:hover {
+				color: white;
+			}
+		}
 	}
 }

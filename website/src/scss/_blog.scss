@@ -1,0 +1,16 @@
+
+.post {
+	margin-bottom: 30px;
+
+	.date {
+		color: $dark-grey;
+	}
+
+	.title {
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 16px;
+		color: $black-blue;
+		margin: 15px 0;
+	}
+}
