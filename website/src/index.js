@@ -2,6 +2,14 @@ import './scss/index.scss';
 
 // fullpage initialization
 $(document).ready(() => {
+	const headerTitleMap = [];
+	headerTitleMap['sfylabs-main'] = 'home';
+	headerTitleMap['sfylabs-services'] = 'services';
+	headerTitleMap['threat-fabric'] = 'threatfabric';
+	headerTitleMap['csd'] = 'csd';
+	headerTitleMap['sfylabs-contact'] = 'contact';
+	headerTitleMap['sfylabs-partners'] = 'partners';
+
 	$('#fullpage').fullpage({
 		continuousHorizontalKey: 'ZWtzY2hlbWEuYmVfVWpLWTI5dWRHbHVkVzkxYzBodmNtbDZiMjUwWVd3PThocg==',
 		resetSlidersKey: 'ZWtzY2hlbWEuYmVfMUFoY21WelpYUlRiR2xrWlhKemI3NQ==',
@@ -17,6 +25,10 @@ $(document).ready(() => {
 			preventDefaultException: {tagName: /.*/}
 		},
 		afterLoad: function(anchorLink, index){
+			if (anchorLink) {
+				$('.header-title').text(headerTitleMap[anchorLink]);
+			}
+
 			if (index === 2) {
 				const loadedSection = $(this);
 				const scrollableSlides = loadedSection.find('.fp-scrollable');
@@ -28,6 +40,11 @@ $(document).ready(() => {
 				}
 			}
 
+		},
+		afterSlideLoad: function( anchorLink, index, slideAnchor){
+			if (anchorLink) {
+				$('.header-title').text(headerTitleMap[slideAnchor]);
+			}
 		}
 	});
 

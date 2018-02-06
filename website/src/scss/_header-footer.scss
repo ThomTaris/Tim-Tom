@@ -3,6 +3,7 @@
 	z-index:9;
 	text-align: left;
 	width: 100%;
+	background-color: $base-grey;
 }
 
 #footer-container {
@@ -17,16 +18,16 @@
 
 #header-small-container {
 	display: block;
+	position: relative;
 
 	header {
 		width: 100%;
-		height: 60px;
-		line-height: 60px;
+		height: 40px;
 
 		.hamburger {
 			position: absolute;
 			top: 9px;
-			left: 7px;
+			right: 7px;
 			width: 27px;
 			height: 21px;
 			background: url(../resources/hamburger.svg);
@@ -42,7 +43,7 @@
 			display: none;
 			position: absolute;
 			top: 9px;
-			left: 7px;
+			right: 7px;
 			width: 21px;
 			height: 21px;
 			background: url(../resources/close.svg);
@@ -51,6 +52,35 @@
 			border: 0;
 			z-index: 10000000000000;
 		}
+	}
+
+	.logo {
+		background: url(../resources/sfylabs-logo.png);
+		width: 103px;
+		height: 27px;
+		background-size: 103px 27px;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 7px;
+		top: 7px;
+	}
+
+	.header-title {
+		width:100px;
+		height:40px;
+		line-height: 40px;
+		vertical-align: center;
+		position:absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		margin: 0 auto;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 14px;
+		color: white;
+
 	}
 
 	.menu {
@@ -74,7 +104,7 @@
 
 		li {
 			display: block;
-			padding: 15px 0 15px 45px;
+			padding: 15px 0 15px $mobile-left-right-margin;
 			border-bottom: $base-grey 1px solid;
 			text-transform: uppercase;
 		}
@@ -114,29 +144,77 @@
 
 /* tablet */
 @media only screen and (min-width: 501px) and (max-width:999px) {
-
+	#header-normal-container {
+		background-color: $base-grey;
+		width: 100%;
+	}
 }
 
 /* desktop */
 @media screen and (min-width:1000px) {
 	#header-normal-container {
+		background-color: $base-grey;
 		width: 900px;
+		margin: 0 auto;
+	}
+}
+
+/* big desktop */
+@media screen and (min-width:1200px) {
+	#header-normal-container {
+		background-color: $base-grey;
+		width: 1100px;
 		margin: 0 auto;
 	}
 }
 
 /* tablet & desktop */
 @media only screen and (min-width: 501px) {
+	#header-container {
+		background-color: initial;
+	}
+
 	#header-small-container {
 		display: none;
 	}
 
 	#header-normal-container {
 		display: block;
-		text-align: right;
+		position: relative;
+		height: 40px;
+
+		.logo {
+			background: url(../resources/sfylabs-logo.png);
+			width: 114px;
+			height: 30px;
+			background-size: 114px 30px;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: $tablet-left-right-margin;
+			top: 6px;
+		}
+
+		.header-title {
+			width:200px;
+			height:40px;
+			line-height: 40px;
+			vertical-align: center;
+			position:absolute;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 500;
+			font-size: 16px;
+			color: white;
+
+		}
 
 		ul {
-			margin: 11px $tablet-left-right-margin 0 0;
+			position: absolute;
+			right: $tablet-left-right-margin;
+			top: 12px;
 			padding: 0;
 			list-style-type: none;
 		}

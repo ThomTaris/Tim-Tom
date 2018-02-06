@@ -7,7 +7,7 @@
 	background-image: url('../resources/sfylabs-logo.png');
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: left;
 	height: 50px;
 }
 
@@ -47,23 +47,15 @@
 	background-repeat: no-repeat;
 }
 
-.logo-eclecticiq {
-	display: inline-block;
-	width: 146px;
-	height: 28px;
-	background: url(../resources/logo-eclecticiq.svg);
-	background-size: 146px 28px;
-	background-repeat: no-repeat;
+.partner {
+	margin-bottom: 30px;
+
+	img {
+		width: 140px;
+	}
 }
 
-.logo-threatconnect {
-	display: inline-block;
-	width: 160px;
-	height: 43px;
-	background: url(../resources/logo_threatconnect.png);
-	background-size: 160px 43px;
-	background-repeat: no-repeat;
-}
+
 
 
 
@@ -136,6 +128,16 @@
 }
 
 .image-subtitle {
+	font-weight: 400;
+	font-size: $mobile-text-font-size;
+	line-height: $mobile-text-line-height;
+	color: $black-green;
+	width: 230px;
+	margin: 0 auto;
+	text-align: justify;
+}
+
+.logo-subtitle {
 	font-weight: 400;
 	font-size: $mobile-text-font-size;
 	line-height: $mobile-text-line-height;
@@ -217,6 +219,38 @@
 		.illustration-csd2 {
 			background-color: white;
 			height: image-height($csd-page-img2-width, $csd-page-img2-height, $desktop-min-img-width);
+		}
+	}
+}
+
+@media screen and (min-width:1200px) {
+	.section {
+		width: 1100px;
+	}
+
+	.illustration-container {
+		margin: 0 0 15px 0;
+
+		.illustration-main {
+			height: image-height($main-page-img-width, $main-page-img-height, $big-desktop-min-img-width);
+		}
+
+		.illustration-product {
+			height: image-height($product-page-img-width, $product-page-img-height, $big-desktop-min-img-width);
+		}
+
+		.illustration-robot {
+			height: image-height($tf-page-img-width, $tf-page-img-height, $big-desktop-min-img-width);
+		}
+
+		.illustration-csd1 {
+			background-color: white;
+			height: image-height($csd-page-img1-width, $csd-page-img1-height, $big-desktop-min-img-width);
+		}
+
+		.illustration-csd2 {
+			background-color: white;
+			height: image-height($csd-page-img2-width, $csd-page-img2-height, $big-desktop-min-img-width);
 		}
 	}
 }

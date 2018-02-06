@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = [
 	{
@@ -13,7 +14,11 @@ module.exports = [
 				hash: true,
 				template: './src/index.html',
 				filename: './index.html'
-			})
+			}),
+			new CopyWebpackPlugin([
+				{ from: './src/resources/favicon.ico', to: './favicon.ico' },
+				{ from: './sfylabs/partner-logos/**/*', to: '.' },
+			])
 		],
 
 		module: {
@@ -71,7 +76,10 @@ module.exports = [
 				hash: true,
 				template: './src/blog.html',
 				filename: './index.html'
-			})
+			}),
+			new CopyWebpackPlugin([
+				{ from: './src/resources/favicon.ico', to: './favicon.ico' },
+			])
 		],
 
 		module: {

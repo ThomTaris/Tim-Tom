@@ -10,15 +10,12 @@ https://medium.com/a-beginners-guide-for-webpack-2/index-html-using-html-webpack
 
 https://medium.com/tech-angels-publications/bundle-your-favicons-with-webpack-b69d834b2f53
 
-https://developer.mozilla.org/nl/docs/Web/CSS/calc
+https://github.com/webpack-contrib/copy-webpack-plugin
 
-font 18 bij 21px
+http://jsfiddle.net/kYDgL/
 
-hr over volle breedte en wit
-
-linkje more ipv learn more about threatfabric (kleur groen)
-
-alleen grijze koppen (verder alle schermen zelfde look and feel)
-
-kopjes fixed bij scrollen; ander kopje tonen als op volgende sectie aangekomen
+kaders bij services ook om logo's heen.
+formulier naast contact informatie
+tekstkleur moet 223b44 zijn
+balkje menu vastzetten
 
