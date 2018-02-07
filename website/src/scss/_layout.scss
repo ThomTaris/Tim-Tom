@@ -11,7 +11,7 @@
 }
 
 .scroll-bumper {
-	height: 250px;
+	height: 100px;
 }
 
 .content-container {
@@ -66,6 +66,10 @@
 	text-align: center;
 }
 
+.full-width-on-mobile {
+	margin: 0 (-$mobile-left-right-margin) 40px (-$mobile-left-right-margin);
+}
+
 %page-title-base {
 	text-transform: uppercase;
 	font-weight: 500;
@@ -107,7 +111,7 @@
 	font-size: $mobile-text-font-size;
 	line-height: $mobile-text-line-height;
 	text-align: left;
-	margin-bottom: 20px;
+	margin-bottom: 3px;
 }
 
 %separator-base {
@@ -249,6 +253,14 @@
 
 /* tablet & desktop */
 @media only screen and (min-width: 501px) {
+	.full-width-on-mobile {
+		margin:initial;
+	}
+
+	.full-width-on-tablet {
+		margin: 0 (-$tablet-left-right-margin);
+	}
+
 	.small-only {
 		display: none;
 	}

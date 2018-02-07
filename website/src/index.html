@@ -21,7 +21,7 @@
             <div class="logo">
             </div>
 
-            <div class="header-title">test</div>
+            <div class="header-title"></div>
 
             <div class="menu">
                 <ul>
@@ -49,12 +49,20 @@
             <div class="section__content content-container main-page">
                 <h1 class="page-title">Manage cyber risk and protect your online assets</h1>
                 <hr class="separator"/>
-                <p class="plain-text">
+                <p class="notification">
                     Providing executives and managers with a strategic advantage while allowing operational teams to remediate in real-time.
                 </p>
-                <div class="illustration-container">
-                    <div class="illustration-main"></div>
+                <!--<div class="full-width-on-mobile">-->
+                    <!--<img src="sfylabs/illustrations/main-page.svg" style="width: 100%;">-->
+                <!--</div>-->
+
+                <div class="full-width-on-tablet">
+                    <img src="sfylabs/illustrations/main-page.svg" style="width: 100%;">
                 </div>
+
+                <!--<div class="illustration-container">-->
+                    <!--<div class="illustration-main"></div>-->
+                <!--</div>-->
                 <p class="notification small-only">
                     Learn more about our threat intelligence and detection services.
                 </p>
@@ -70,8 +78,11 @@
                 <div class="section__content content-container centered-content">
                     <h1 class="section--title">our services</h1>
 
-                    <div class="illustration-container">
-                        <div class="illustration-product"></div>
+                    <!--<div class="illustration-container">-->
+                        <!--<div class="illustration-product"></div>-->
+                    <!--</div>-->
+                    <div class="full-width-on-tablet">
+                        <img src="sfylabs/illustrations/page2.png" style="width: 100%;">
                     </div>
 
                     <div class="columns-on-big-screen">
@@ -183,8 +194,11 @@
                     <p class="plain-text">
                         One of the challenges of financial institutions is to be able to keep an eye on the numerous attack vectors used by criminals. Financially motivated threat actors broadening their scope towards mobile attacks results in additional vectors to worry about.
                     </p>
-                    <div class="illustration-container">
-                        <div class="illustration-csd1"></div>
+                    <!--<div class="illustration-container">-->
+                        <!--<div class="illustration-csd1"></div>-->
+                    <!--</div>-->
+                    <div class="full-width-on-tablet">
+                        <img src="sfylabs/illustrations/pagecsd1.png" style="width: 100%;">
                     </div>
                     <p class="plain-text">
                         The end-users remain the weak link in the security chain, therefore visibility on the endpoints used to interact with online services is of utmost importance.
@@ -419,8 +433,8 @@
 			const map = new google.maps.Map(document.getElementById('map'), {
 				zoom: 13,
 				center: uluru,
-                styles: [{"elementType":"geometry","stylers":[{"color":"#ebe3cd"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#523735"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#f5f1e6"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#c9b2a6"}]},{"featureType":"administrative.land_parcel","elementType":"geometry.stroke","stylers":[{"color":"#dcd2be"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text.fill","stylers":[{"color":"#ae9e90"}]},{"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#dfd2ae"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#dfd2ae"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#93817c"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#a5b076"}]},{"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"color":"#447530"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#f5f1e6"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#fdfcf8"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#f8c967"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#e9bc62"}]},{"featureType":"road.highway.controlled_access","elementType":"geometry","stylers":[{"color":"#e98d58"}]},{"featureType":"road.highway.controlled_access","elementType":"geometry.stroke","stylers":[{"color":"#db8555"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#806b63"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#dfd2ae"}]},{"featureType":"transit.line","elementType":"labels.text.fill","stylers":[{"color":"#8f7d77"}]},{"featureType":"transit.line","elementType":"labels.text.stroke","stylers":[{"color":"#ebe3cd"}]},{"featureType":"transit.station","elementType":"geometry","stylers":[{"color":"#dfd2ae"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#b9d3c2"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#92998d"}]}]
-			});
+                styles: [{"elementType":"geometry","stylers":[{"color":"#f5f5f5"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#f5f5f5"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text.fill","stylers":[{"color":"#bdbdbd"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},{"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#dadada"}]},{"featureType":"road.highway","elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},{"featureType":"transit.station","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#c9c9c9"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]}]
+            });
 			const marker = new google.maps.Marker({
 				position: uluru,
 				map: map

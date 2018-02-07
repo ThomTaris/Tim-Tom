@@ -96,7 +96,6 @@ $( document ).ready(() => {
 
 // form initialization
 $(function () {
-
 	$('#requestDemoForm').on('submit',function(e) {
 		e.preventDefault();
 
@@ -118,28 +117,28 @@ $(function () {
 			alert('Please fill the captcha');
 		}
 
-		// $.ajax({
-		// 	url: './request.html',
-		// 	type: 'POST',
-		// 	contentType: 'application/json; charset=UTF-8',
-		// 	data: JSON.stringify({
-		// 		name: name,
-		// 		email: email,
-		// 		company: company,
-		// 		whitepaper: whitepaperChecked,
-		// 		message: message,
-		// 		captcha: captcha
-		// 	}),
-		// 	cache: false,
-		// 	success: function () {
-		// 		alert('Your request has been submitted');
-		// 		$('#requestDemoForm').trigger('reset');
-		// 		grecaptcha.reset();
-		// 	},
-		// 	error: function () {
-		// 		alert('Something went wrong, try again later');
-		// 	}
-		// });
+		$.ajax({
+			url: './request.html',
+			type: 'POST',
+			contentType: 'application/json; charset=UTF-8',
+			data: JSON.stringify({
+				name: name,
+				email: email,
+				company: company,
+				whitepaper: whitepaperChecked,
+				message: message,
+				captcha: captcha
+			}),
+			cache: false,
+			success: function () {
+				alert('Your request has been submitted');
+				$('#requestDemoForm').trigger('reset');
+				grecaptcha.reset();
+			},
+			error: function () {
+				alert('Something went wrong, try again later');
+			}
+		});
 
 	});
 });

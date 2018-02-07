@@ -18,6 +18,7 @@ module.exports = [
 			new CopyWebpackPlugin([
 				{ from: './src/resources/favicon.ico', to: './favicon.ico' },
 				{ from: './sfylabs/partner-logos/**/*', to: '.' },
+				{ from: './sfylabs/illustrations/**/*', to: '.' },
 			])
 		],
 
@@ -77,8 +78,14 @@ module.exports = [
 				template: './src/blog.html',
 				filename: './index.html'
 			}),
+			new HtmlWebpackPlugin({
+				hash: true,
+				template: './src/blog-post.html',
+				filename: './blog-post.html'
+			}),
 			new CopyWebpackPlugin([
 				{ from: './src/resources/favicon.ico', to: './favicon.ico' },
+				{ from: './sfylabs/blog-images/**/*', to: '.' },
 			])
 		],
 
