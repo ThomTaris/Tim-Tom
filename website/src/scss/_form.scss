@@ -20,6 +20,17 @@
 	}
 }
 
+.normal-button {
+	background-color: $logo-green;
+	color: white;
+	font-size: $mobile-text-font-size;
+	border: 0;
+	padding: 10px 15px;
+	margin-top: 30px;
+	width: 60px;
+	text-align: center;
+}
+
 input[type='text'],
 input[type='email'],
 textarea,
@@ -118,8 +129,6 @@ button {
 /* desktop & tablet */
 @media only screen and (min-width: 500px) {
 	.form-container {
-		width: 450px;
-		padding: 0 120px;
-		margin: 0 auto;
+		width: 47%;
 	}
 }

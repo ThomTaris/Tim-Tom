@@ -3,8 +3,8 @@ import './scss/index.scss';
 // fullpage initialization
 $(document).ready(() => {
 	const headerTitleMap = [];
-	headerTitleMap['sfylabs-main'] = 'home';
-	headerTitleMap['sfylabs-services'] = 'services';
+	headerTitleMap['sfylabs-main'] = '';
+	headerTitleMap['sfylabs-services'] = 'our services';
 	headerTitleMap['threat-fabric'] = 'threatfabric';
 	headerTitleMap['csd'] = 'csd';
 	headerTitleMap['sfylabs-contact'] = 'contact';
@@ -56,6 +56,10 @@ $(document).ready(() => {
 
 	$( ".product-page-csd-link" ).click(() => {
 		$.fn.fullpage.moveSlideRight();
+	});
+
+	$('.back-to-services').click(() => {
+		$.fn.fullpage.moveTo(3, 0);
 	});
 });
 

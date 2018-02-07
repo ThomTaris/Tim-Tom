@@ -164,6 +164,17 @@
 	}
 }
 
+.contact-container {
+	display: flex;
+	flex-direction: column;
+
+	.info-container {
+		.centered-content {
+			text-align: center;
+		}
+	}
+}
+
 /* tablet */
 @media only screen and (min-width: 501px) and (max-width:999px){
 	.section {
@@ -279,7 +290,7 @@
 			flex-direction: row;
 			flex-wrap: nowrap;
 			justify-content: space-evenly;
-			margin: 80px (-$tablet-left-right-margin);
+			margin: 80px -60px;
 		}
 
 		.breakout {
@@ -354,5 +365,16 @@
 			flex: 1;
 		}
 
+	}
+
+	.contact-container {
+		flex-direction: row;
+
+		.info-container {
+			width: 47%;
+			.centered-content {
+				text-align: center;
+			}
+		}
 	}
 }
